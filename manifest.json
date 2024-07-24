@@ -1,0 +1,10 @@
+{
+	"id": "custom-tlp-plugin",
+	"name": "Custom TLP Plugin",
+	"version": "1.0.0",
+	"minAppVersion": "0.12.0",
+	"description": "A custom plugin to display TLP status based on frontmatter.",
+	"author": "Dein Name",
+	"authorUrl": "https://deine-website.com",
+	"isDesktopOnly": false
+  }

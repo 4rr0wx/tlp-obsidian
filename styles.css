@@ -1,0 +1,48 @@
+/* Allgemeine Stildefinitionen für die TLP-Anzeige */
+.tlp-banner {
+  width: 150px; /* Feste Breite für den Banner */
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 5px 0;
+  position: absolute; /* Absolute Positionierung relativ zum Editor-Container */
+  top: 10px; /* Abstand von oben */
+  left: 10px; /* Abstand von links */
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+.tlp-red {
+  background-color: #ff0000;
+}
+
+.tlp-amber {
+  background-color: #ffbf00;
+}
+
+.tlp-amber-strict {
+  background-color: #ff8000;
+}
+
+.tlp-green {
+  background-color: #00ff00;
+}
+
+.tlp-white {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Verstecken der TLP-Leiste standardmäßig */
+.tlp-banner {
+  display: none;
+}
+
+/* TLP-Banner für TLP:RED anzeigen */
+body[data-tlp="RED"] .tlp-banner.tlp-red,
+body[data-tlp="AMBER"] .tlp-banner.tlp-amber,
+body[data-tlp="AMBER-STRICT"] .tlp-banner.tlp-amber-strict,
+body[data-tlp="GREEN"] .tlp-banner.tlp-green,
+body[data-tlp="WHITE"] .tlp-banner.tlp-white {
+  display: block;
+}
