@@ -29,6 +29,12 @@ class CustomTLPPlugin extends Plugin {
       return;
     }
 
+    // Check if the container is an editor
+    if (!activeLeaf.view.containerEl.classList.contains('workspace-leaf-content')) {
+      this.clearTLPBanner();
+      return;
+    }
+
     const activeFile = this.app.workspace.getActiveFile();
     if (!activeFile) {
       this.clearTLPBanner();
@@ -53,7 +59,7 @@ class CustomTLPPlugin extends Plugin {
 
   clearTLPBanner() {
     document.body.classList.remove('tlp-active');
-    document.querySelectorAll('.tlp-banner').forEach(el => el.remove());
+    document.querySelectorAll('.workspace-leaf-content .tlp-banner').forEach(el => el.remove());
   }
 }
 
